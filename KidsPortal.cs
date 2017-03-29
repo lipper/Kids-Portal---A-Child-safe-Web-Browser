@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Browser1
 {
-    public partial class Form1 : Form
+    public partial class KidsPortal : Form
     {
         string homepage = "http://google.com";
-        public Form1()
+        public KidsPortal()
         {
 
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Browser1
 
         }
 
-        Form2 settings = new Form2();
+        Settings settings = new Settings();
         
         private void tb_KeyDown(object sender, KeyEventArgs e)
         {

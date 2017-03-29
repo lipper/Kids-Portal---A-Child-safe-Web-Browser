@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Browser1
 {
-    public partial class Form2 : Form
+    public partial class Settings : Form
     {
-        public Form2()
+        public Settings()
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
