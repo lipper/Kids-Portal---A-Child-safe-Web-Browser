@@ -1,0 +1,10 @@
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\bin\Debug\Browser1.exe.config
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\bin\Debug\Browser1.exe
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\bin\Debug\Browser1.pdb
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\obj\Debug\Browser1.csprojResolveAssemblyReference.cache
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\obj\Debug\Browser1.Form1.resources
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\obj\Debug\Browser1.Properties.Resources.resources
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\obj\Debug\Browser1.csproj.GenerateResource.Cache
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\obj\Debug\Browser1.exe
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\obj\Debug\Browser1.pdb
+C:\Users\JaeAllen\Documents\Visual Studio 2015\Projects\CPP\Browser1\Browser1\obj\Debug\Browser1.Form2.resources
