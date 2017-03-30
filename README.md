@@ -1,4 +1,4 @@
-# Kids-Portal---A-Child-safe-Web-Browser
+# Kids Portal: A Child-safe Web Browser Using Web Scraping Techniques
 Uses Web Scraping Techniques
 
 A child-safe web browser, where no parents will ever be worried again for the safety of their children while surfing the internet.
