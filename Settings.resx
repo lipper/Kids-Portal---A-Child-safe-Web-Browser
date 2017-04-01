@@ -117,6 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>BACKGROUND
+In this era of technology, accessing information nearly about everything is just a few clicks away, and almost instantaneously. Almost everyone, including children as well as adults, has access to a computer and the internet these days. With this advancement of technology, it poses many new problems and challenges for us today, altering our lifestyle significantly. One of the problems that arose is the safety of children who has the access to a computer and internet. With almost infinite number of information a children could access and view from the internet, may it be accidentally or purposely, there is a chance that viewing inappropriate content might happen. 
+
+KIDS PORTAL
+A child-safe web browser, where no parents will ever be worried again for the safety of their children while surfing the internet. Kids Portal is designed especially for kids 3 to 8 years old, an easy-to-use and simplistic internet browser software. Kids Portal is an extra layer of protection to keep your kids safe and prevent them from any inappropriate or explicit adult material on the internet. Kids Portal's robust protection is what separates it from any existing similar software.
+
+DEVELOPERS
+Jae Allen Nuguid, Mark Lawrence Benisano, and Calvin Joseph Martin.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
