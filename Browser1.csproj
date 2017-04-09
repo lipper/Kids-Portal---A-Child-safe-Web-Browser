@@ -63,6 +63,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -153,6 +154,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="homepage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
