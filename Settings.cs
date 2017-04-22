@@ -120,8 +120,9 @@ namespace Browser1
 
         private void radioButton10_CheckedChanged(object sender, EventArgs e)
         {
-
             kp.changeTick(0);
         }
+
+        
     }
 }

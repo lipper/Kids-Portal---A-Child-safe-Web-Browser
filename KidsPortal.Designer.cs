@@ -134,7 +134,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel2.Controls.Add(this.pictureBox3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.settingss, 9, 0);
@@ -178,7 +178,7 @@
             // settingss
             // 
             this.settingss.Image = global::Browser1.Properties.Resources.settings;
-            this.settingss.Location = new System.Drawing.Point(889, 3);
+            this.settingss.Location = new System.Drawing.Point(888, 3);
             this.settingss.Name = "settingss";
             this.settingss.Size = new System.Drawing.Size(31, 26);
             this.settingss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,7 +191,7 @@
             // 
             this.history.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.history.Image = global::Browser1.Properties.Resources.history;
-            this.history.Location = new System.Drawing.Point(789, 3);
+            this.history.Location = new System.Drawing.Point(788, 3);
             this.history.Name = "history";
             this.history.Size = new System.Drawing.Size(40, 26);
             this.history.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,7 +203,7 @@
             // bookmark
             // 
             this.bookmark.Image = global::Browser1.Properties.Resources.bookmark;
-            this.bookmark.Location = new System.Drawing.Point(739, 3);
+            this.bookmark.Location = new System.Drawing.Point(738, 3);
             this.bookmark.Name = "bookmark";
             this.bookmark.Size = new System.Drawing.Size(36, 26);
             this.bookmark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -230,14 +230,14 @@
             this.navBar.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBar.Location = new System.Drawing.Point(153, 3);
             this.navBar.Name = "navBar";
-            this.navBar.Size = new System.Drawing.Size(433, 29);
+            this.navBar.Size = new System.Drawing.Size(432, 29);
             this.navBar.TabIndex = 5;
             this.navBar.Text = "Kids Portal - Start up...";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Browser1.Properties.Resources.search;
-            this.pictureBox4.Location = new System.Drawing.Point(592, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(591, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(70, 26);
             this.pictureBox4.TabIndex = 9;
@@ -256,7 +256,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 15000;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // KidsPortal
@@ -291,11 +291,11 @@
 
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.WebBrowser browser;
+        public System.Windows.Forms.WebBrowser browser;
        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
        public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox navBar;
+       public System.Windows.Forms.TextBox navBar;
         private System.Windows.Forms.PictureBox bookmark;
         private System.Windows.Forms.PictureBox settingss;
         private System.Windows.Forms.PictureBox history;
