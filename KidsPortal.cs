@@ -249,7 +249,7 @@ namespace Browser1
         {
             //to run parallel
             checkTerms();
-            //   checkOtherBrowser();
+             checkOtherBrowser();
            
         }
 

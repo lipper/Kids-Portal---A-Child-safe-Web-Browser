@@ -26,7 +26,7 @@ namespace Browser1
             kp.browser.Document.ExecCommand("Copy", false, null);
             String texts = Clipboard.GetText();
             kp.browser.Document.ExecCommand("Unselect", false, null);
-
+            Clipboard.SetText("Kids Portal - Safest Web Browser for Kids!");
 
             String positive = "";
         
