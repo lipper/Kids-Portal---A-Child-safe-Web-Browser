@@ -1,68 +1,72 @@
 ﻿using System;
-using System.Collections.Generic;
+
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
-using System.Xml;
+
 
 namespace Browser1
 {
     public partial class KidsPortal : Form
     {
-        
-        public string[] homepage = { "https://www.google.com", "http://www.kiddle.co/", "http://www.kidrex.org/","" };
+
+        public string[] homepage = { "https://www.google.com", "http://www.kiddle.co/", "http://www.kidrex.org/", "" };
         Boolean firstCheck = true;
         string[] search = { "https://www.google.com.ph/search?q=", "http://www.kiddle.co/s.php?q=", "http://www.kidrex.org/results/?q=", "https://www.google.com.ph/search?q=" };
         ToolTip toolTip = new ToolTip();
-       public int set = 2;
+      public Settings settings;
+        Checker check;
+        BrowserControl browControl;
+        public int set = 2;
+
+
         public KidsPortal()
         {
             InitializeComponent();
-     navBar.KeyDown += new KeyEventHandler(tb_KeyDown);
+
+
+            WebBrowserHelper.FixBrowserVersion(this.browser.Name);
+            navBar.KeyDown += new KeyEventHandler(tb_KeyDown);
+            browser.IsWebBrowserContextMenuEnabled = false;
+          browser.AllowWebBrowserDrop = false;
             // FormBorderStyle = FormBorderStyle.None;
-           
-
-
         }
-        Settings settings;
-        Checker check;
-        BrowserControl browControl;
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            timer1.Start();
-            
+
             settings = new Settings(this);
             check = new Browser1.Checker();
             browControl = new BrowserControl();
             browser.Navigate(homepage[set]);
             settings.Show();
             settings.Visible = false;
-
+            timer1.Start();
         }
 
         public void goHomepage()
         {
             progressBar.Value = 0;
             browser.Navigate(homepage[set]);
-          
+
         }
-        
+
         private void tb_KeyDown(object sender, KeyEventArgs e)
         {
-        
+
             if (e.KeyCode == Keys.Enter)
             {
-               start();
+                start();
 
             }
 
-           
+
         }
-        
+
         private void start()
         {
             progressBar.Value = 0;
@@ -85,7 +89,7 @@ namespace Browser1
 
         private void checkTerms()
         {
-            
+
             check.checkTerms(this);
 
         }
@@ -105,7 +109,7 @@ namespace Browser1
         {
 
             string newText = "";
-            if (!(text.Contains(".com") || text.Contains(".org") || text.Contains(".net"))|| text.Contains(' '))
+            if (!(text.Contains(".com") || text.Contains(".org") || text.Contains(".net")) || text.Contains(' '))
             {
                 if (text.Contains(' '))
                 {
@@ -116,9 +120,9 @@ namespace Browser1
                         newText += words[x] + '+';
                     }
                 }
-                
+
                 browser.Navigate(search[set] + newText.TrimEnd('+'));
-                
+
                 return false;
             }
             return true;
@@ -138,12 +142,12 @@ namespace Browser1
 
         private void tableLayoutPanel1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
+
             settings.Visible = true;
 
 
         }
-        
+
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -153,7 +157,12 @@ namespace Browser1
 
         private void browser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            navBar.Text = e.Url.ToString();
+            navBar.Text = e.Url.AbsoluteUri.ToString();
+            if(navBar.Text.Contains("javascript")|| navBar.Text.Contains("about:blank"))
+            {
+            }else
+            settings.historyBox.Text += DateTime.Now.ToString() + "   " + browser.Url.AbsoluteUri+ "\n";
+
 
             if (firstCheck)
             {
@@ -183,7 +192,7 @@ namespace Browser1
 
             }
         }
-        
+
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             toolTip.Show("View Bookmark", bookmark);
@@ -205,7 +214,7 @@ namespace Browser1
             settings.Visible = true;
         }
 
-       
+
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
             start();
@@ -222,7 +231,7 @@ namespace Browser1
             toolTip.Show("Go to homepage", pictureBox2);
         }
 
-     
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             browser.GoBack();
@@ -247,11 +256,12 @@ namespace Browser1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //to run parallel
+
             checkTerms();
-             checkOtherBrowser();
-           
+            checkOtherBrowser();
+
         }
+
 
         public void changeTick(int j)
         {
@@ -259,8 +269,21 @@ namespace Browser1
             {
                 timer1.Stop();
             }
-            timer1.Start();
-            timer1.Interval =j;
+            else
+            {
+                timer1.Start();
+                timer1.Interval = j;
+            }
+        }
+
+        private void browser_NewWindow(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void browser_FileDownload(object sender, EventArgs e)
+        {
+           
         }
     }
 }

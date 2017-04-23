@@ -18,9 +18,11 @@ namespace Browser1
             this.kp = kp;
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
-   
+            historyBox.Text = "Time\t\t\tURL\n";
+
+            reportBox.Text = "Time\t\t\tURL\n";
         }
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,7 +32,7 @@ namespace Browser1
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             custom.Enabled = true;
-            kp.homepage[3] = custom.Text; 
+            kp.homepage[3] = custom.Text;
             kp.set = 3;
             kp.goHomepage();
         }
@@ -62,8 +64,8 @@ namespace Browser1
             if (custom.Text.Contains(" "))
             {
                 MessageBox.Show("Invalid URL!\n\nMust not include spaces!", "Kids Portal - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                custom.Text="http://google.com";
-                
+                custom.Text = "http://google.com";
+
                 kp.set = 0;
                 kp.goHomepage();
             }
@@ -73,7 +75,7 @@ namespace Browser1
                 kp.set = 3;
                 kp.goHomepage();
             }
-            }
+        }
 
         ColorDialog colorDialog1 = new ColorDialog();
         private void button2_Click(object sender, EventArgs e)
@@ -81,7 +83,7 @@ namespace Browser1
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 Color color = colorDialog1.Color;
-               kp.tableLayoutPanel1.BackColor = color;
+                kp.tableLayoutPanel1.BackColor = color;
                 panel1.BackColor = color;
                 kp.tableLayoutPanel2.BackColor = color;
                 kp.panel1.BackColor = color;
@@ -123,6 +125,15 @@ namespace Browser1
             kp.changeTick(0);
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            historyBox.Text = "Time\t\t\tURL\n";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            reportBox.Text = "Time\t\t\tURL\n";
+        }
     }
 }

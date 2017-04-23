@@ -48,6 +48,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
@@ -56,16 +57,21 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.b5 = new System.Windows.Forms.CheckBox();
             this.b4 = new System.Windows.Forms.CheckBox();
             this.b2 = new System.Windows.Forms.CheckBox();
             this.b1 = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.historyBox = new System.Windows.Forms.RichTextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.reportBox = new System.Windows.Forms.RichTextBox();
             checkBox6 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -76,6 +82,8 @@
             this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +92,7 @@
             // 
             checkBox6.AutoSize = true;
             checkBox6.Enabled = false;
-            checkBox6.Location = new System.Drawing.Point(170, 100);
+            checkBox6.Location = new System.Drawing.Point(174, 102);
             checkBox6.Name = "checkBox6";
             checkBox6.Size = new System.Drawing.Size(133, 26);
             checkBox6.TabIndex = 5;
@@ -284,6 +292,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.radioButton10);
             this.groupBox3.Controls.Add(this.radioButton9);
             this.groupBox3.Controls.Add(this.radioButton8);
@@ -292,10 +301,20 @@
             this.groupBox3.Controls.Add(this.radioButton5);
             this.groupBox3.Location = new System.Drawing.Point(17, 24);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(566, 173);
+            this.groupBox3.Size = new System.Drawing.Size(566, 231);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Real-Time Protection";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 159);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(553, 68);
+            this.label4.TabIndex = 6;
+            this.label4.Text = resources.GetString("label4.Text");
             // 
             // radioButton10
             // 
@@ -304,7 +323,6 @@
             this.radioButton10.Name = "radioButton10";
             this.radioButton10.Size = new System.Drawing.Size(84, 26);
             this.radioButton10.TabIndex = 5;
-            this.radioButton10.TabStop = true;
             this.radioButton10.Text = "Disable";
             this.radioButton10.UseVisualStyleBackColor = true;
             this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton10_CheckedChanged);
@@ -316,7 +334,6 @@
             this.radioButton9.Name = "radioButton9";
             this.radioButton9.Size = new System.Drawing.Size(140, 26);
             this.radioButton9.TabIndex = 4;
-            this.radioButton9.TabStop = true;
             this.radioButton9.Text = "Every 1 minute";
             this.radioButton9.UseVisualStyleBackColor = true;
             this.radioButton9.CheckedChanged += new System.EventHandler(this.radioButton9_CheckedChanged);
@@ -328,7 +345,6 @@
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(158, 26);
             this.radioButton8.TabIndex = 3;
-            this.radioButton8.TabStop = true;
             this.radioButton8.Text = "Every 30 seconds";
             this.radioButton8.UseVisualStyleBackColor = true;
             this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
@@ -364,7 +380,6 @@
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(257, 26);
             this.radioButton5.TabIndex = 0;
-            this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Every second (Recommended)";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
@@ -382,6 +397,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(checkBox6);
             this.groupBox4.Controls.Add(this.b5);
@@ -390,26 +406,34 @@
             this.groupBox4.Controls.Add(this.b1);
             this.groupBox4.Location = new System.Drawing.Point(17, 24);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(566, 172);
+            this.groupBox4.Size = new System.Drawing.Size(566, 245);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Web Browser Control";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(539, 68);
+            this.label5.TabIndex = 7;
+            this.label5.Text = resources.GetString("label5.Text");
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 35);
+            this.label3.Location = new System.Drawing.Point(6, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 22);
+            this.label3.Size = new System.Drawing.Size(222, 22);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Disable other web browsers.";
+            this.label3.Text = "Disable other web browsers";
             // 
             // b5
             // 
             this.b5.AutoSize = true;
-            this.b5.Checked = true;
-            this.b5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.b5.Location = new System.Drawing.Point(170, 68);
+            this.b5.Location = new System.Drawing.Point(174, 70);
             this.b5.Name = "b5";
             this.b5.Size = new System.Drawing.Size(76, 26);
             this.b5.TabIndex = 4;
@@ -419,9 +443,7 @@
             // b4
             // 
             this.b4.AutoSize = true;
-            this.b4.Checked = true;
-            this.b4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.b4.Location = new System.Drawing.Point(6, 132);
+            this.b4.Location = new System.Drawing.Point(10, 134);
             this.b4.Name = "b4";
             this.b4.Size = new System.Drawing.Size(136, 26);
             this.b4.TabIndex = 3;
@@ -431,9 +453,7 @@
             // b2
             // 
             this.b2.AutoSize = true;
-            this.b2.Checked = true;
-            this.b2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.b2.Location = new System.Drawing.Point(6, 100);
+            this.b2.Location = new System.Drawing.Point(10, 102);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(148, 26);
             this.b2.TabIndex = 1;
@@ -443,9 +463,7 @@
             // b1
             // 
             this.b1.AutoSize = true;
-            this.b1.Checked = true;
-            this.b1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.b1.Location = new System.Drawing.Point(6, 68);
+            this.b1.Location = new System.Drawing.Point(10, 70);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(158, 26);
             this.b1.TabIndex = 0;
@@ -454,6 +472,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.historyBox);
             this.tabPage5.Location = new System.Drawing.Point(4, 31);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -462,8 +482,30 @@
             this.tabPage5.Text = "History";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(465, 359);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 28);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Clear History";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // historyBox
+            // 
+            this.historyBox.Location = new System.Drawing.Point(6, 6);
+            this.historyBox.Name = "historyBox";
+            this.historyBox.ReadOnly = true;
+            this.historyBox.Size = new System.Drawing.Size(591, 350);
+            this.historyBox.TabIndex = 0;
+            this.historyBox.Text = "";
+            this.historyBox.WordWrap = false;
+            // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.button4);
+            this.tabPage6.Controls.Add(this.reportBox);
             this.tabPage6.Location = new System.Drawing.Point(4, 31);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -502,6 +544,26 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(465, 359);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 28);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Clear Report";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // reportBox
+            // 
+            this.reportBox.Location = new System.Drawing.Point(6, 6);
+            this.reportBox.Name = "reportBox";
+            this.reportBox.ReadOnly = true;
+            this.reportBox.Size = new System.Drawing.Size(591, 350);
+            this.reportBox.TabIndex = 2;
+            this.reportBox.Text = "";
+            this.reportBox.WordWrap = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,6 +591,8 @@
             this.tabPage4.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -550,7 +614,7 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -574,5 +638,11 @@
         public System.Windows.Forms.CheckBox b2;
         public System.Windows.Forms.CheckBox b1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+       public System.Windows.Forms.RichTextBox historyBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.RichTextBox reportBox;
     }
 }

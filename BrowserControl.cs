@@ -10,7 +10,7 @@ namespace Browser1
 {
     class BrowserControl
     {
-        
+
         String[] urls = { "iexplore", "chrome", "firefox", "opera" };
         public void checkOtherBrowser(CheckBox[] boxes)
         {
@@ -18,24 +18,25 @@ namespace Browser1
             {
                 if (boxes[x].Checked)
                 {
-                    
-                    Process[] runingProcess = Process.GetProcesses();
-                    for (int i = 0; i < runingProcess.Length; i++)
+
+                    Process[] runningProcess = Process.GetProcesses();
+                    for (int i = 0; i < runningProcess.Length; i++)
                     {
                         // compare equivalent process by their name
-                        if (runingProcess[i].ProcessName == urls[x])
+                        if (runningProcess[i].ProcessName == urls[x])
                         {
                             // kill  running process
-                            MessageBox.Show("Web Browser Detected: "+urls[x]+"\n Browser Closed.");
+                            MessageBox.Show("Web Browser Detected: " + urls[x] + "\n Browser Terminated.");
                             try
                             {
-                                runingProcess[i].Kill();
+                                runningProcess[i].Kill();
                             }
                             catch (Exception e)
                             {
+                                Console.WriteLine(e);
                             }
 
-                            }
+                        }
                     }
                 }
 

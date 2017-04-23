@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Browser1.exe" size="1450416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Browser1.exe" size="1455536">
       <assemblyIdentity name="Browser1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DLXiocYcqzQGFb4G7/ddYHWWp4jP+nk0va+ber2dEHk=</dsig:DigestValue>
+        <dsig:DigestValue>s3tCpUCNM2vrDi+d7LDhDRmp0tYIFmFqmWz2COjMBRk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
