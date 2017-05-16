@@ -24,13 +24,15 @@ namespace Browser1
 
         public KidsPortal()
         {
+
+            MessageBox.Show("This is a prototype of Kids Portal given to a limited number of clients to showcase what Kids Portal can do.\n\nThis version does not function fully yet according to its purpose, but it demonstrate and presents the main idea or concept of Kids Portal.\n\nIf you have any suggestions for improvement, questions, or concerns please do not hesitate to contact Kids Portal's project lead: Jae Allen Nuguid at JaeAllen35@Live.com or 09195-317-325", "Kids Portal - Prototype 1", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             InitializeComponent();
-
-
             WebBrowserHelper.FixBrowserVersion(this.browser.Name);
             navBar.KeyDown += new KeyEventHandler(tb_KeyDown);
             browser.IsWebBrowserContextMenuEnabled = false;
           browser.AllowWebBrowserDrop = false;
+            
             // FormBorderStyle = FormBorderStyle.None;
         }
 
@@ -104,10 +106,9 @@ namespace Browser1
             browControl.checkOtherBrowser(browsers);
         }
 
-
         private Boolean passURL(String text)
         {
-
+            text = text.ToLower();
             string newText = "";
             if (!(text.Contains(".com") || text.Contains(".org") || text.Contains(".net")) || text.Contains(' '))
             {

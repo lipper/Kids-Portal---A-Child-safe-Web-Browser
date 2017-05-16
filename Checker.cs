@@ -22,15 +22,16 @@ namespace Browser1
 
 
             this.kp = kp;
+            try {
+                kp.browser.Document.ExecCommand("SelectAll", false, null);
+                kp.browser.Document.ExecCommand("SelectAll", false, null);
+                kp.browser.Document.ExecCommand("Copy", false, null);
+                String texts = Clipboard.GetText();
+                kp.browser.Document.ExecCommand("Unselect", false, null);
+                Clipboard.SetText("Kids Portal - Safest Web Browser for Kids!");
+       
 
-            kp.browser.Document.ExecCommand("SelectAll", false, null);
-            kp.browser.Document.ExecCommand("SelectAll", false, null);
-            kp.browser.Document.ExecCommand("Copy", false, null);
-            String texts = Clipboard.GetText();
-            kp.browser.Document.ExecCommand("Unselect", false, null);
-            Clipboard.SetText("Kids Portal - Safest Web Browser for Kids!");
-
-            String positive = "",positives="";
+            String positive = "", positives = "";
 
             int count = 0;
             for (int x = 0; x < terms.Length; x++)
@@ -40,20 +41,32 @@ namespace Browser1
                 {
                     count++;
                     positive += terms[x] + "\n";
-                    positives += terms[x]+" ";
+                    positives += terms[x] + " ";
                 }
             }
             if (count <= 0)
             {
-                MessageBox.Show("This page is safe!\n" + positive, "Kids Portal - Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // MessageBox.Show("This page is safe!\n" + positive, "Kids Portal - Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             else
-            {
-                MessageBox.Show("This page contains " + count + " prohibited terms:\n" + positive, "Kids Portal - Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                kp.settings.reportBox.Text += DateTime.Now.ToString() + " " + kp.navBar.Text + "\nKeywords: " + positives + "\n";
+            {   
+                   kp.browser.Navigate("about:blank");
+                
+                   kp.goHomepage();
 
+                    MessageBox.Show("The previous page is blocked\n\nIt contains " + count + " prohibited terms:\n" + positive + "\n\nYou're redirected to the homepage.", "Kids Portal - Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    kp.settings.reportBox.Text += DateTime.Now.ToString() + " " + kp.navBar.Text + "\nKeywords: " + positives + "\n";
+
+                }
+            }
+            catch (Exception e)
+            {
+                // Does nothing yet...
             }
         }
+
     }
 }
+

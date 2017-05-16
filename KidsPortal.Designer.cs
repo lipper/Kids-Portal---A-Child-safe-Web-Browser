@@ -136,7 +136,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel2.Controls.Add(this.pictureBox3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.settingss, 9, 0);
@@ -180,7 +180,7 @@
             // settingss
             // 
             this.settingss.Image = global::Browser1.Properties.Resources.settings;
-            this.settingss.Location = new System.Drawing.Point(885, 3);
+            this.settingss.Location = new System.Drawing.Point(883, 3);
             this.settingss.Name = "settingss";
             this.settingss.Size = new System.Drawing.Size(31, 26);
             this.settingss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -193,7 +193,7 @@
             // 
             this.history.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.history.Image = global::Browser1.Properties.Resources.history;
-            this.history.Location = new System.Drawing.Point(785, 3);
+            this.history.Location = new System.Drawing.Point(783, 3);
             this.history.Name = "history";
             this.history.Size = new System.Drawing.Size(40, 26);
             this.history.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -205,7 +205,7 @@
             // bookmark
             // 
             this.bookmark.Image = global::Browser1.Properties.Resources.bookmark;
-            this.bookmark.Location = new System.Drawing.Point(735, 3);
+            this.bookmark.Location = new System.Drawing.Point(733, 3);
             this.bookmark.Name = "bookmark";
             this.bookmark.Size = new System.Drawing.Size(36, 26);
             this.bookmark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,14 +232,14 @@
             this.navBar.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBar.Location = new System.Drawing.Point(153, 3);
             this.navBar.Name = "navBar";
-            this.navBar.Size = new System.Drawing.Size(430, 29);
+            this.navBar.Size = new System.Drawing.Size(428, 29);
             this.navBar.TabIndex = 5;
             this.navBar.Text = "Kids Portal - Start up...";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Browser1.Properties.Resources.search;
-            this.pictureBox4.Location = new System.Drawing.Point(589, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(587, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(70, 26);
             this.pictureBox4.TabIndex = 9;
@@ -270,7 +270,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KidsPortal";
-            this.Text = "Kids Portal - Alpha 1.1";
+            this.Text = "Kids Portal - Prototype";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
